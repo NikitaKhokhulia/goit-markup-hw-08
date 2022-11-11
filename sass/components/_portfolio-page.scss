@@ -1,0 +1,74 @@
+/* Portfolio */
+
+.filter__list {
+  @include flex-center;
+  margin-bottom: 50px;
+  gap: 8px;
+}
+
+.cards__set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cards__title {
+  color: var(--title-text-color);
+  @include fonts(18px, 700, 2);
+  letter-spacing: 0.06em;
+}
+
+.cards__subtitle {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.87;
+}
+
+.cards__link {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+  transition: box-shadow var(--transition-hover-focus);
+}
+
+.cards__image {
+  position: relative;
+  overflow: hidden;
+}
+
+.cards__overlay {
+  position: absolute;
+  @include flex-center;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: var(--transition-hover-focus);
+}
+
+.cards__overlay-text {
+  @include fonts(18px, 400, 1.56);
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #fff;
+}
+
+.cards__link {
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  &:hover .cards__overlay,
+  &:focus .cards__overlay {
+    transform: translateY(0);
+  }
+}
+
+.cards__border {
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  padding: 20px 24px;
+}

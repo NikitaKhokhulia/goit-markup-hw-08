@@ -1,0 +1,21 @@
+/* logo */
+
+.logo {
+  padding: 24px 0px;
+  color: #000;
+  font-family: Raleway, sans-serif;
+  @include fonts (26px, 700, 1.2);
+  text-decoration: none;
+}
+
+.logo__title {
+  color: var(--accent-color);
+}
+
+.logo__wrapper {
+  margin-bottom: 20px;
+}
+
+.logo__title--white {
+  color: #fff;
+}

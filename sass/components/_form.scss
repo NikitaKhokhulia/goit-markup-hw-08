@@ -1,0 +1,133 @@
+/* Form */
+
+.form__title {
+  @include fonts(20px, 700, 1.15);
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 0 40px;
+}
+
+.form__group.comment {
+  margin-bottom: 20px;
+}
+
+.form__label {
+  display: flex;
+  @include fonts(12px, 400, 1.17);
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+
+.form__input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 42px;
+  outline: none;
+  transition: border-color var(--transition-hover-focus);
+}
+
+.form__icon {
+  position: absolute;
+  top: 55%;
+  left: 55px;
+  transition: fill var(--transition-hover-focus);
+  border-radius: 2px;
+}
+
+.form__input:focus {
+  border-color: var(--accent-color);
+}
+
+.form__input:focus + .form__icon {
+  fill: var(--accent-color);
+}
+
+.form__comment {
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+  outline: none;
+  transition: border-color var(--transition-hover-focus);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form__comment:focus {
+  border-color: var(--accent-color);
+}
+
+textarea::placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form__group.agreement {
+  position: relative;
+  @include flex-center;
+  margin-bottom: 30px;
+}
+
+.form__agreement-label {
+  position: relative;
+  @include flex-center;
+  @include fonts(14px, 400, 1.7);
+  letter-spacing: 0.03em;
+}
+
+.form__agreement-link {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.form__agreement-wrapper {
+  display: block;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  margin-right: 7px;
+  border: 2px solid #212121;
+  transition: border var(--transition-hover-focus),
+    opacity var(--transition-hover-focus);
+}
+
+.form__agreement-input {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.form__agreement-icon {
+  opacity: 0;
+  transition: opacity var(--transition-hover-focus);
+  border-radius: 2px;
+}
+
+.form__agreement-input {
+  &:checked + .form__agreement-wrapper {
+    border: none;
+  }
+  &:checked + .form__agreement-wrapper .form__agreement-icon {
+    opacity: 1;
+  }
+}
+
+.form__button {
+  @include flex-center;
+  margin-bottom: 40px;
+}

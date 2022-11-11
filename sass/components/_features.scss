@@ -1,0 +1,37 @@
+/* Section Features */
+
+.features__list {
+  display: flex;
+}
+
+.features__item {
+  margin-right: 30px;
+  max-width: 270px;
+
+  &::last-child {
+    margin-right: 0px;
+  }
+}
+
+.features__page-container {
+  @include flex-center;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background: #f5f4fa;
+  height: 120px;
+}
+
+.features__title {
+  color: var(--title-text-color);
+  margin-bottom: 10px;
+}
+
+.features__title {
+  color: var(--title-text-color);
+  @include fonts(14px, 700, 1.14);
+}
+
+.features__subtitle {
+  font-size: 14px;
+  line-height: 1.7;
+}
