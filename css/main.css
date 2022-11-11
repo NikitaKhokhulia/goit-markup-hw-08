@@ -257,7 +257,7 @@ body {
   -o-transition: color var(--transition-hover-focus);
   transition: color var(--transition-hover-focus);
 }
-@media screen and (min-width: desc) {
+@media screen and (min-width: 1200px) {
   .auth-nav__link {
     display: -webkit-box;
     display: -ms-flexbox;
