@@ -1,6 +1,10 @@
 /* Section Works */
 .section.works {
   padding-top: 0px;
+  @media screen and (max-width:$pre-desc) {
+    display: none;
+    
+  }
 }
 
 .works__title {

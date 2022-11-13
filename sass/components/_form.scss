@@ -1,11 +1,20 @@
 /* Form */
 
 .form__title {
-  @include fonts(20px, 700, 1.15);
+  @include fonts(20px, 700, 1.5);
   margin-bottom: 30px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+  width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $desc) {
+    @include fonts(20px, 700, 1.15);
+    width: 448px;
+    text-align: center;
+  }
 }
 
 .form__group {
@@ -28,13 +37,17 @@
 }
 
 .form__input {
-  width: 448px;
+  width: 370px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 42px;
   outline: none;
   transition: border-color var(--transition-hover-focus);
+
+  @media screen and (min-width: $desc) {
+    width: 448px;
+  }
 }
 
 .form__icon {
@@ -54,13 +67,16 @@
 }
 
 .form__comment {
-  width: 448px;
+  width: 370px;
   height: 120px;
   padding: 12px 16px;
   outline: none;
   transition: border-color var(--transition-hover-focus);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  @media screen and (min-width: $desc) {
+    width: 448px;
+  }
 }
 
 .form__comment:focus {
@@ -124,6 +140,19 @@ textarea::placeholder {
   }
   &:checked + .form__agreement-wrapper .form__agreement-icon {
     opacity: 1;
+  }
+}
+
+.form__agreement-text {
+  white-space: nowrap;
+  @include fonts(12px, 400, 1.18);
+}
+
+.form__container {
+  @include fonts(12px, 400, 1.18);
+
+  @media screen and (min-width: $desc) {
+    @include fonts(14px, 400, 1.71);
   }
 }
 

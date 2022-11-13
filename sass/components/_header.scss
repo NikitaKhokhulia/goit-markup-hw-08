@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-    @media screen and (min-width: $pre-tabl) {
+  @media screen and (min-width: $pre-tabl) {
     @include flex-center;
   }
 }
@@ -18,7 +18,7 @@
 /* Site-nav */
 .site-nav__list {
   display: flex;
-  margin-left: 88px;
+  margin-left: 93px;
 }
 
 .site-nav__item {
@@ -86,39 +86,32 @@
 
 /* Auth-nav */
 .auth-nav__list {
-    display: block;
-    margin-left: auto;
-    padding-top: 21px;
-    padding-bottom: 21px;
-    padding-right: 15px;
+  display: block;
+  margin-left: auto;
+  padding: 21px 0;
 
   @media screen and (min-width: $desc) {
     @include flex-center;
-    margin-left: auto;
+    padding: 0;
   }
 }
 
 .auth-nav__item {
-    display: block;
-    margin-bottom: 10px;
-    &:last-child {
-      margin: 0;
-    }
-  
-  @media screen and (min-width: $pre-tabl) {
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $desc) {
     margin-left: 50px;
     &:first-child {
-      margin-left: 0px;
+      margin-left: 0;
+      margin-bottom: 0;
     }
   }
 }
 
 .auth-nav__link {
-  @media screen and (min-width:$desc) {
-    @include flex-center;
-    padding: 32px 0px;
-  }
-
   color: var(--primary-text-color);
   @include fonts(14px, 500, 1.14);
   font-size: 14px;
@@ -127,6 +120,11 @@
   letter-spacing: 0.02em;
   text-decoration: none;
   transition: color var(--transition-hover-focus);
+
+  @media screen and (min-width: $desc) {
+    @include flex-center;
+    padding: 32px 0px;
+  }
 }
 
 .auth-nav__icon {
@@ -149,8 +147,137 @@
   }
 }
 
+// Mobile-menu
+
 .burger {
-  @media screen and (min-width: $pre-tabl) {
+  background-color: #fff;
+  border: none;
+  @media screen and (min-width: $tabl) {
     display: none;
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform var(--transition-hover-focus);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+.mob-menu__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  max-width: 480px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 40px;
+}
+
+.btn-close {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  margin-top: 21px;
+  margin-right: 25px;
+  margin-bottom: 8.3px;
+  height: 18.7px;
+  width: 18.7px;
+  margin-left: auto;
+  cursor: pointer;
+  background: #ffffff;
+  border: none;
+}
+
+.btn-close__icon {
+  fill: currentColor;
+  transition: fill var(--transition-hover-focus);
+  .btn-close:hover &,
+  .btn-close:focus & {
+    fill: var(--accent-color);
+  }
+}
+
+.mob-menu__list {
+  @include fonts(40px, 500, 1.17);
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+  margin-bottom: 302px;
+}
+
+.mob-menu__item {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 0;
+    transition: color var(--transition-hover-focus);
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.mob-contacts__list {
+  margin-bottom: 64px;
+}
+
+.mob-contacts__item {
+  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 0;
+    transition: color var(--transition-hover-focus);
+  }
+  @include fonts(24px, 500, 1.17);
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &--current {
+    @include fonts(34px, 500, 1.17);
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+}
+
+.mob-social__list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .mob-social__link {
+    color: var(--accent-color);
+    transition: color var(--transition-hover-focus);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+
+    @include fonts(18px, 500, 1.22);
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+    padding-right: 10px;
   }
 }

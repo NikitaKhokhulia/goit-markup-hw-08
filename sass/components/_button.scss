@@ -48,6 +48,7 @@
 
 .button--subscription {
   @include flex-center;
+  max-width: 200px;
 }
 
 .button__icon {

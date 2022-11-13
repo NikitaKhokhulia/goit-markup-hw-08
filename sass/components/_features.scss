@@ -1,15 +1,33 @@
 /* Section Features */
 
 .features__list {
-  display: flex;
+  @media screen and (min-width: $tabl) and (max-width: $pre-desc) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  @media screen and (min-width: $desc) {
+    display: flex;
+  }
 }
 
 .features__item {
-  margin-right: 30px;
-  max-width: 270px;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 
-  &::last-child {
-    margin-right: 0px;
+  @media screen and (min-width: $tabl) {
+    max-width: 354px;
+  }
+
+  @media screen and (min-width: $desc) {
+    margin-right: 30px;
+    max-width: 270px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
   }
 }
 
@@ -23,12 +41,13 @@
 
 .features__title {
   color: var(--title-text-color);
-  margin-bottom: 10px;
-}
-
-.features__title {
-  color: var(--title-text-color);
   @include fonts(14px, 700, 1.14);
+  color: var(--title-text-color);
+  margin-bottom: 10px;
+
+  @media screen and (max-width: $pre-tabl) {
+    text-align: center;
+  }
 }
 
 .features__subtitle {

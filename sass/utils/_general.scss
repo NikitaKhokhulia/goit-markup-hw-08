@@ -60,7 +60,7 @@ body {
   @media screen and (min-width: $mob) {
     width: $mob;
   }
-  
+
   @media screen and (min-width: $tabl) {
     width: $tabl;
   }
@@ -71,8 +71,13 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media screen and (min-width: $desc) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .visually-hidden {

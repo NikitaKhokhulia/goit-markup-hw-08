@@ -9,10 +9,64 @@
   margin-left: auto;
   margin-right: auto;
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url(../images/solutions.jpg), #c4c4c4;
+    url(../images/hero/overlay~480.jpg), #c4c4c4;
   background-repeat: no-repeat;
   border: 1px solid #000000;
   background-position: center;
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+      url(../images/hero/overlay~480@2x.jpg), #c4c4c4;
+    background-repeat: no-repeat;
+    border: 1px solid #000000;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: $tabl) {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+      url(../images/hero/overlay~768.jpg), #c4c4c4;
+    background-repeat: no-repeat;
+    border: 1px solid #000000;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url(../images/hero/overlay~768@2x.jpg), #c4c4c4;
+      background-repeat: no-repeat;
+      border: 1px solid #000000;
+      background-position: center;
+      background-size: cover;
+      
+      
+    }
+  }
+
+  @media screen and (min-width: $desc) {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+      url(../images/hero/overlay~1200.jpg), #c4c4c4;
+    background-repeat: no-repeat;
+    border: 1px solid #000000;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url(../images/hero/overlay~1200@2x.jpg), #c4c4c4;
+      background-repeat: no-repeat;
+      border: 1px solid #000000;
+      background-position: center;
+      background-size: cover;
+    }
+  }
 }
 
 .hero__container {
@@ -24,7 +78,7 @@
 .hero__title {
   margin-bottom: 30px;
   color: #fff;
-  @include fonts (44px, 900, 1.36);
+  @include fonts(44px, 900, 1.36);
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
