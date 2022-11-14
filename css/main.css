@@ -1021,6 +1021,25 @@ body {
   gap: 30px;
 }
 
+@media screen and (max-width: 480px) {
+  .clients__item {
+    -ms-flex-preferred-size: calc((100% - 120px) / 3);
+        flex-basis: calc((100% - 120px) / 3);
+  }
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    -ms-flex-preferred-size: calc((100% - 120px) / 3);
+        flex-basis: calc((100% - 120px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    -ms-flex-preferred-size: calc((100% - 750px) / 6);
+        flex-basis: calc((100% - 750px) / 6);
+  }
+}
+
 .clients__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1158,6 +1177,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .footer-subscription {
@@ -1188,6 +1208,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .footer-subscription__form {
@@ -1199,7 +1220,6 @@ body {
 }
 
 .footer-subscription__input {
-  width: 450px;
   display: inline-block;
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1209,6 +1229,7 @@ body {
   background: #2f303a;
   color: var(--primary-text-color);
   padding: 16px;
+  width: 100%;
 }
 .footer-subscription__input::-webkit-input-placeholder {
   font-size: 16px;
