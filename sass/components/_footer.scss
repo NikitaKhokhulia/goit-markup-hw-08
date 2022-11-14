@@ -1,12 +1,6 @@
 /* Footer */
 
 .footer {
-  // font-display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: baseline;
-  // margin-right: auto;
-  // margin-left: auto;
   background-color: #2f303a;
   padding: 60px 0;
 }
@@ -14,6 +8,7 @@
 .footer__flex {
   display: flex;
   flex-direction: column;
+  justify-content: baseline;
 
   @media screen and (min-width: $tabl) and (max-width: $pre-desc) {
     flex-direction: row;
@@ -23,6 +18,7 @@
 
   @media screen and (min-width: 1200px) {
     flex-direction: row;
+    justify-content: baseline;
   }
 }
 
@@ -31,6 +27,7 @@
 
   @media screen and (min-width: $desc) {
     margin-bottom: 0;
+    width: 231px;
   }
 }
 
@@ -76,8 +73,6 @@
 .footer-subscription {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
 
   @media screen and (min-width: $desc) {
@@ -128,16 +123,7 @@
   @media screen and (min-width: $desc) {
     width: 358px;
     height: 50px;
+    margin-right: 12px;
     margin-bottom: 0;
   }
 }
-
-// .footer__social-address {
-
-//   @media screen and (min-width: $tabl) and (max-width: $desc) {
-//     display: flex;
-//     justify-content: center;
-//     align-items: baseline;
-//     gap: 165px;
-//   }
-// }
