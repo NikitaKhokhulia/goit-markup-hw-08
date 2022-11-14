@@ -419,10 +419,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 10px;
+}
+.mob-social__list .mob-social__item {
+  -ms-flex-preferred-size: calc((100% - 30px) / 4);
+      flex-basis: calc((100% - 30px) / 4);
 }
 .mob-social__list .mob-social__link {
   color: var(--accent-color);
@@ -621,6 +622,7 @@ body {
 }
 
 .hero__title {
+  width: 100%;
   margin-bottom: 30px;
   color: #fff;
   font-size: 26px;
@@ -628,9 +630,13 @@ body {
   line-height: 1.6;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 360px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {

@@ -262,8 +262,11 @@
 
 .mob-social__list {
   display: flex;
-  align-items: center;
   gap: 10px;
+
+  .mob-social__item {
+    flex-basis: calc((100% - 30px) / 4);
+  }
 
   .mob-social__link {
     color: var(--accent-color);

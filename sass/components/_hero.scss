@@ -76,14 +76,19 @@
 }
 
 .hero__title {
+  width: 100%;
   margin-bottom: 30px;
   color: #fff;
   @include fonts(26px, 900, 1.6);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 360px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: $tabl) {
+    width: 360px;
+  }
+
   @media screen and (min-width: $desc) {
     @include fonts(44px, 900, 1.36);
     width: 696px;
