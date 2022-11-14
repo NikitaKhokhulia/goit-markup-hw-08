@@ -66,6 +66,9 @@
     background-color: transparent;
     border-radius: 2px;
     transition: background-color var(--transition-hover-focus);
+    @media screen and (min-width: $tabl) and (max-width: $desc) {
+      bottom: -6px;
+    }
   }
 
   &:hover::after,
@@ -176,20 +179,6 @@
   }
 }
 
-// .mob-menu__body {
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-
-//   max-width: 480px;
-//   width: 100%;
-//   height: 100vh;
-//   margin-right: auto;
-//   margin-left: auto;
-//   padding: 0px 40px;
-//   justify-content: space-between;
-// }
-
 .btn-close {
   position: absolute;
   display: flex;
@@ -234,6 +223,9 @@
   &:focus {
     color: $accent-color;
   }
+  &--current {
+    color: var(--accent-color);
+  }
 }
 
 .mob-contacts__list {
@@ -263,10 +255,8 @@
 .mob-social__list {
   display: flex;
   gap: 10px;
-
-  .mob-social__item {
-    flex-basis: calc((100% - 30px) / 4);
-  }
+  width: 100%;
+  flex-wrap: wrap;
 
   .mob-social__link {
     color: var(--accent-color);
